@@ -2,39 +2,47 @@
   "name": "run-go",
   "displayName": "Run Go",
   "description": "Adds a button to run and compile Go to the active text editor",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "publisher": "EthanScully",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/EthanScully/vscode-run-go"
-  },  
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Other"],
+  "categories": [
+    "Other"
+  ],
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "run-go.run",
-      "title": "Run Go File",
-      "category": "run-go",
-      "icon": "$(play)"
-    }, {
-      "command": "run-go.compile",
-      "title": "Compile Go File and Run",
-      "category": "run-go",
-      "icon": "$(check)"
-    }],
-    "menus": {
-      "editor/title/run": [{
+    "commands": [
+      {
         "command": "run-go.run",
-        "when": "resourceLangId == go && !isInDiffEditor && !virtualWorkspace && shellExecutionSupported"
-      },{
+        "title": "Run Go File",
+        "category": "run-go",
+        "icon": "$(play)"
+      },
+      {
         "command": "run-go.compile",
-        "when": "resourceLangId == go && !isInDiffEditor && !virtualWorkspace && shellExecutionSupported"
-      }]
+        "title": "Compile Go File and Run",
+        "category": "run-go",
+        "icon": "$(check)"
+      }
+    ],
+    "menus": {
+      "editor/title/run": [
+        {
+          "command": "run-go.run",
+          "when": "resourceLangId == go && !isInDiffEditor && !virtualWorkspace && shellExecutionSupported"
+        },
+        {
+          "command": "run-go.compile",
+          "when": "resourceLangId == go && !isInDiffEditor && !virtualWorkspace && shellExecutionSupported"
+        }
+      ]
     }
   },
   "scripts": {
@@ -43,12 +51,15 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
-    "eslint": "^8.54.0",
-    "typescript": "^5.3.2",
+    "@types/vscode": "^1.85.0",
     "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.8"
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
   }
 }

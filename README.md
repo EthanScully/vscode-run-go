@@ -3,10 +3,10 @@
 __Feel free to modify for other languages.__
 ## How to Modify
 ### Install Necessary Packages
-Install [Node.js](https://nodejs.org/)
-Using the node.js package manager install vsce
+Install [Node.js](https://nodejs.org/), and
+using the node.js package manager install the dependencies, in the root directory
 ```shell
-npm install -g vsce
+npm install
 ```
 ### Build VS Code Extension
 When in the root directory, run
