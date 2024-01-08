@@ -2,18 +2,11 @@
 
 __Feel free to modify for other languages.__
 ## How to Modify
-### Install Necessary Packages
-Install [Node.js](https://nodejs.org/), and
-using the node.js package manager install the dependencies, in the root directory
-```shell
-npm install
-```
+
 ### Build VS Code Extension
-When in the root directory, run
-```shell
-vsce package
 ```
-which will create the .vsix file
+Rename root directory name to extension, add it to a zip file and change the file extension to .vsix
+```
 ### What to modify
 The package.json defines what buttons link to what in the extension.js script
 ```json
